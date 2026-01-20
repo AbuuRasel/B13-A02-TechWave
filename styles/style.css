@@ -44,7 +44,7 @@ section {
 /* ===== BUTTONS ===== */
 .btn-gradient {
   border: none;
-  padding: 12px 28px;
+  padding: 0.7rem 1.7rem;
   border-radius: 999px;
   background: linear-gradient(45deg, #ffdd00, #ff4ecd, #7b2cff);
   color: #fff;
@@ -66,6 +66,7 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  max-width: 1600px;
   min-height: calc(100vh - 90px);
   display: flex;
   align-items: center;
@@ -228,4 +229,58 @@ section {
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 1rem 0;
+}
+/* section featured */
+.featured {
+  max-width: 1600px;
+  margin: 7.5rem 12.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  max-width: 1200px;
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 7.5rem;
+}
+.video-card {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: none;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* content */
+.card-content {
+  padding: 0.9rem 1.8rem;
+}
+
+.card-content h2 {
+  color: #fff;
+  font-size: 26px;
+  margin-top: 18px;
+}
+
+.card-content p {
+  color: #cbbfe3;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+
+/* duration */
+.duration {
+  display: flex;
+  gap: 0.5rem;
+}
+.duration span {
+  color: #28f3a4;
 }
