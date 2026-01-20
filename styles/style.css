@@ -9,11 +9,9 @@ body {
   background: radial-gradient(circle at top, #2a0d4e, #0b0620);
   color: #fff;
 }
-header {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-section {
+header,
+section,
+footer {
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -40,7 +38,9 @@ section {
   gap: 30px;
   opacity: 0.8;
 }
-
+.hamburger-menu {
+  display: none;
+}
 /* ===== BUTTONS ===== */
 .btn-gradient {
   border: none;
@@ -58,6 +58,7 @@ section {
   background: transparent;
   border: 1px solid #2aff8f;
   color: #2aff8f;
+  cursor: pointer;
 }
 
 /* ===== HERO ===== */
@@ -288,7 +289,7 @@ iframe {
 
 /* host-container */
 
-.host-container{
+.host-container {
   max-width: 1200px;
   margin: 3rem;
   padding: 2rem;
@@ -301,35 +302,84 @@ iframe {
   border-radius: 24px;
 }
 
-.host-content{
+.host-content {
   max-width: 896px;
 }
-.host-content h3{
-font-size: 2rem;
-font-weight: 600;
-margin-bottom: 1rem;
+.host-content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
-.host-content p{
+.host-content p {
   font-size: 1rem;
   line-height: 1.4rem;
   margin-bottom: 1rem;
 }
 
-.social-icon{
+.social-icon {
   max-width: 184px;
   display: flex;
   gap: 1rem;
 }
-.social-icon img{
-
+.social-icon img {
 }
-.circle{
+.circle {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #533C72;
+  border: 2px solid #533c72;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* footer style */
+.footer {
+  background-image: url(../assets/footer-bg.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.footer-content h1 {
+  max-width: 410px;
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 4rem;
+  margin: 0 4rem 1rem 4rem;
+}
+.social-links {
+  max-width: 544px;
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 1rem;
+}
+.link {
+  display: flex;
+  gap: 8px;
+}
+.link p {
+  font-size: 0.8rem;
+}
+.copyright {
+  max-width: 1360px;
+}
+.copyright p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fafafa;
+  padding-bottom: 4rem;
 }
