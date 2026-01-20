@@ -52,6 +52,19 @@ footer {
   cursor: pointer;
 }
 
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 40px rgba(17, 153, 142, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 15px 40px rgba(17, 153, 142, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
 .btn-outline {
   padding: 12px 26px;
   border-radius: 999px;
@@ -66,9 +79,10 @@ footer {
   background-image: url(../assets/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   max-width: 1600px;
-  min-height: calc(100vh - 90px);
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,4 +396,225 @@ iframe {
   line-height: 1.5rem;
   color: #fafafa;
   padding-bottom: 4rem;
+}
+
+/* responsive for small devices */
+
+@media screen and (max-width: 576px) {
+  /* ===== GLOBAL ===== */
+  header,
+  section,
+  footer {
+    max-width: 100%;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar {
+    padding: 1rem;
+  }
+
+  /* Navbar button hide */
+  .navbar .btn-gradient,
+  .nav-menu {
+    display: none;
+  }
+
+  /* Hero buttons visible */
+  .hero-buttons .btn-gradient {
+    display: inline-flex;
+  }
+  .btn-gradient {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    /* width: 32px; */
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    max-width: 440px;
+    height: 446px;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-content {
+    margin: 20px 0;
+  }
+  .hero-circle {
+    width: 200px;
+  }
+
+  .mic-image {
+    width: 50px;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 0.8rem;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    margin: 3rem 1rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 0.9rem;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1.5rem;
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .stats h3 {
+    font-size: 1.6rem;
+  }
+
+  .stats span {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+  /* ===== WHY SECTION ===== */
+  .why {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    border-radius: 24px;
+  }
+
+  /* ===== FEATURED ===== */
+  .featured {
+    margin: 4rem 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .video-card {
+    width: 100%;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  /* ===== HOST ===== */
+  .host-container {
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .host-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .host-content p {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    margin: 0 auto;
+  }
+
+  /* ===== FOOTER BASE ===== */
+  .footer {
+    width: 100%;
+    min-height: auto;
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 1.2rem 1.8rem;
+  }
+
+  /* ===== FOOTER CONTENT ===== */
+  .footer-content {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    text-align: center;
+  }
+
+  /* ===== LOGO ===== */
+  .footer-content .logo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ===== SOCIAL / PLATFORM LINKS ===== */
+  .social-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+  }
+
+  .link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .link img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ===== COPYRIGHT ===== */
+  .copyright {
+    margin-top: 1.2rem;
+  }
+
+  .copyright p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.7;
+    text-align: center;
+  }
 }
